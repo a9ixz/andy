@@ -1,7 +1,45 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const prefix = '.';
-client.login("OTY2NzU4MjEwODkzNjQ3OTUy.G1LYfi.-TJkBoqYwfOzuo1i3_p9MhQMe3Qg2Tl3_q2G3c")
+//client.login("OTY2NzU4MjEwODkzNjQ3OTUy.G1LYfi.-TJkBoqYwfOzuo1i3_p9MhQMe3Qg2Tl3_q2G3c")
+
+
+
+
+
+
+
+
+
+
+
+
+client.login("OTM5OTc1MzAzMDk3MzY4NzA5.GJ7Afr.zOkB6dgeewGIyVIvIkqwpw6Dd69I-TY6zCVARE");
+
+
+
+
+
+client.on("ready", async () => {
+  console.log("Starting..");
+  let g = client.guilds.get("971471610685063179"); // 
+  let c = g.channels.get("971471611343552595");  
+  if (c.type === "voice") {
+    c.join();
+    setInterval(() => {
+      if (!g.me.voiceChannel) c.join();
+    }, 1);
+  } else {
+    console.log('Failed To Join: \n The Channel Type isn "Listening."');
+  }
+});
+
+
+
+
+
+
+
 
 
 client.on("message", message => {
